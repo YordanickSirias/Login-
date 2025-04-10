@@ -22,12 +22,13 @@ const CuerpoLogin = () => {
             value={email}
             onChangeText={setEmail}
           />
-          <MaterialCommunityIcons 
-            name="email" 
-            size={20} 
-            color="#FFA500"
-            style={styles.rightIcon}
-          />
+          <View style={styles.iconBackground}>
+            <MaterialCommunityIcons 
+              name="email" 
+              size={30} 
+              color="white"
+            />
+          </View>
         </View>
       </View>
 
@@ -43,26 +44,24 @@ const CuerpoLogin = () => {
             value={password}
             onChangeText={setPassword}
           />
-          <MaterialCommunityIcons 
-            name="lock" 
-            size={20} 
-            color="#FFA500"
-            style={styles.rightIcon}
-          />
+          <View style={styles.iconBackground}>
+            <MaterialCommunityIcons 
+              name="lock" 
+              size={30} 
+              color="white"
+            />
+          </View>
         </View>
       </View>
 
-      {/* Enlace "Forgot password" */}
       <TouchableOpacity style={styles.forgotLink}>
         <Text style={styles.linkText}>Forgot your password?</Text>
       </TouchableOpacity>
 
-      {/* Botón "Login Now" */}
       <TouchableOpacity style={styles.loginButton}>
         <Text style={styles.buttonText}>Login Now</Text>
       </TouchableOpacity>
 
-      {/* Botón "Signup Now" (nuevo) */}
       <TouchableOpacity style={styles.signupButton}>
         <Text style={styles.signupButtonText}>Signup Now</Text>
       </TouchableOpacity>
@@ -72,8 +71,14 @@ const CuerpoLogin = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     width: '100%',
     paddingHorizontal: 20,
+    paddingTop:20,
+    paddingBottom: 40,
+    backgroundColor:"##F1F3F6"
+   
+   
   },
   header: {
     fontSize: 24,
@@ -83,7 +88,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   inputContainer: {
-    marginBottom: 20,
+    marginBottom: 30,
   },
   label: {
     fontSize: 16,
@@ -93,37 +98,40 @@ const styles = StyleSheet.create({
   },
   inputWrapper: {
     flexDirection: 'row',
-    alignItems: 'center',
     borderWidth: 1,
     borderColor: '#ddd',
-    borderRadius: 8,
-    paddingRight: 10,
+    borderRadius: 15,
+    overflow: 'hidden',
   },
   input: {
     flex: 1,
     height: 50,
     fontSize: 16,
     paddingLeft: 15,
-    paddingVertical: 0,
-    paddingRight: 30, // Evita solapamiento con ícono
+    paddingRight: 60,
   },
-  rightIcon: {
-    marginLeft: 10,
+  iconBackground: {
+    position: 'absolute',
+    right: 0,
+    width: 70,
+    height: '100%',
+    backgroundColor: '#FFA500',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   forgotLink: {
     alignSelf: 'flex-end',
     marginBottom: 20,
-
-    
   },
   linkText: {
-    color: '#FFA500',
+    color: '#1E2772',
     fontSize: 14,
+    textDecorationLine: 'underline',
   },
   loginButton: {
     backgroundColor: '#FFA500',
     height: 50,
-    borderRadius: 8,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 15,
@@ -146,16 +154,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-
-  linkText: {
-    color: '#1E2772',  // Cambia este valor al color que desees (ej: rojo)
-    fontSize: 14,
-    // Opcional: añade subrayado
-    textDecorationLine: 'underline', 
-  },
-
-
-  
 });
 
 export default CuerpoLogin;

@@ -6,7 +6,7 @@ import CuerpoLogin from './Componentes/CuerpoLogin';
 const App = () => {
   return (
     <View style={styles.container}>
-      <Banner />
+      <Banner   />
       <CuerpoLogin />
     </View>
   );
@@ -15,8 +15,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
   },
 });
 

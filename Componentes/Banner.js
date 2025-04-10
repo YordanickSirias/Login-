@@ -4,41 +4,42 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 const BannerLogin = () => {
   return (
     <View style={styles.container}>
-    
       <Image 
         source={require("../assets/IMAGEN/login-pana.png")} 
         style={styles.logo}
         resizeMode="contain"
       />
-      <Text style={styles.title}>¡Bienvenido!</Text>
-      <Text style={styles.subtitle}>Inicia sesión en tu cuenta</Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.welcomeText}>Welcome!</Text>
+       
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 30,
-    marginTop: 20,
+    backgroundColor: '#F1F3F6', 
+    width: '100%',
     alignItems: 'center',
+    paddingVertical: 50,
+    paddingHorizontal: 20,
+    marginBottom: 10, 
   },
   logo: {
-    width: 150, // Ajusta estos valores
-    height: 150, // según el tamaño de tu imagen
+    width: 200,  
+    height: 200,
     marginBottom: 20,
   },
-  title: {
+  textContainer: {
+    alignItems: 'center',
+  },
+  welcomeText: {
     fontSize: 32,
     fontWeight: 'bold',
     color: '#1D256E',
-    textAlign: 'center',
   },
-  subtitle: {
-    fontSize: 18,
-    color: '#1F2773',
-    textAlign: 'center',
-    marginTop: 8,
-  },
+
 });
 
 export default BannerLogin;
